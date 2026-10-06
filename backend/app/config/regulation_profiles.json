@@ -1,0 +1,44 @@
+{
+  "_comment": "Regulation profiles — add new profiles here without touching application code (NFR-MAINT-1).",
+  "profiles": [
+    {
+      "code": "EU_VAT_GDPR",
+      "display_name": "EU VAT + GDPR",
+      "description": "European Union: VAT-inclusive display required in B2C; GDPR data-subject rights apply.",
+      "applicable_countries": [
+        "AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU",
+        "IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"
+      ],
+      "default_tax_mode": "inclusive",
+      "compliance_note": "GDPR compliant. Price includes VAT as required by EU consumer law.",
+      "tax_type": "VAT"
+    },
+    {
+      "code": "INDIA_GST",
+      "display_name": "India GST",
+      "description": "India: Goods and Services Tax. B2B buyers can claim input tax credit; B2C display is typically tax-inclusive.",
+      "applicable_countries": ["IN"],
+      "default_tax_mode": "inclusive",
+      "compliance_note": "Price includes GST as applicable.",
+      "tax_type": "GST"
+    },
+    {
+      "code": "BRAZIL_LGPD",
+      "display_name": "Brazil LGPD",
+      "description": "Brazil: LGPD is a data-privacy regulation. Brazilian tax law (ICMS/PIS/COFINS) is complex and product-specific. Velo displays a compliance label; consult local tax counsel for filing obligations.",
+      "applicable_countries": ["BR"],
+      "default_tax_mode": "exclusive",
+      "compliance_note": "LGPD compliant. Applicable taxes may vary by product and state. Consult local counsel.",
+      "tax_type": "OTHER"
+    },
+    {
+      "code": "NO_TAX",
+      "display_name": "No Tax Region",
+      "description": "Regions with no applicable VAT/GST configuration (e.g. USA, UAE free zones). Tax display is omitted.",
+      "applicable_countries": ["US", "AE", "SA", "HK", "SG"],
+      "default_tax_mode": "exclusive",
+      "compliance_note": "",
+      "tax_type": "NONE"
+    }
+  ]
+}
